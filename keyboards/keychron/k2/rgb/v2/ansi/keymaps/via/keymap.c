@@ -140,29 +140,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 };
 
-bool dip_switch_update_user(uint8_t index, bool active) {
-  switch(index) {
-    case 0: // OS switch
-      if (active) { // Mac/iOS mode
-        layer_move(MAC_BASE);
-      }
-      else { // Windows/Android mode
-        layer_move(WIN_BASE);
-      }
-      break;
-    case 1: // Connection switch
-      // Probably it's not possible to do anything sensible here as switching from Cable to BT requires turning off the board. (BT / OFF / Cable)
-      if (active) { // BT mode
-        // do stuff
-      }
-      else { //Cable mode
-        // do stuff
-      }
-      break;
-  }
-  return true;
-}
-
 void keyboard_post_init_user(void) {
   // Customise these values to desired behaviour
   // debug_enable = true;
