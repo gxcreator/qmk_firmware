@@ -11,6 +11,12 @@ OPT_DEFS += -DCORTEX_ENABLE_WFI_IDLE=TRUE
 # Shave some extra bytes
 OPT_DEFS += -DCRT1_AREAS_NUMBER=1
 
+# Some options to reduce RAM usage
+# USE_LINK_GC = yes
+# LTO_ENABLE = yes
+
+# OPT = s
+
 # Shared variables
 ALLCSRC += $(BOARDSRC)
 ALLINC  += $(BOARDINC)
